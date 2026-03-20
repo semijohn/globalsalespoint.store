@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalSalesPoint Dashboard</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter', sans-serif; display:flex; min-height:100vh; background:#f1f3f6; }
+
+    /* Sidebar */
+    .sidebar {
+      width:250px;
+      background:#0d47a1;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      padding:20px;
+      position:fixed;
+      height:100%;
+    }
+
+    .sidebar .logo { font-size:24px; font-weight:700; margin-bottom:40px; text-align:center; }
+
+    .sidebar h3 { margin-top:20px; margin-bottom:10px; font-size:14px; text-transform:uppercase; color:#90caf9; }
+    .sidebar a {
+      display:flex;
+      align-items:center;
+      color:#fff;
+      text-decoration:none;
+      padding:12px 15px;
+      border-radius:8px;
+      margin-bottom:8px;
+      transition:0.3s;
+    }
+    .sidebar a:hover { background:#1976d2; }
+    .sidebar a i { font-size:20px; margin-right:12px; }
+
+    /* Main content */
+    .main {
+      margin-left:250px;
+      padding:20px;
+      width:100%;
+    }
+
+    .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; }
+    .header h1 { color:#0d47a1; font-size:28px; }
+    .header input { padding:8px 15px; border-radius:8px; border:1px solid #ccc; width:220px; }
+
+    .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+
+    .card {
+      background:white;
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom:10px; font-size:18px; color:#0d47a1; }
+    .card p { font-size:14px; color:#555; }
+
+    footer { text-align:center; margin-top:30px; color:#777; font-size:14px; }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .sidebar { width:60px; padding:10px; }
+      .sidebar .logo, .sidebar h3, .sidebar a span { display:none; }
+      .main { margin-left:60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">GSP</div>
+
+  <h3>Dashboard</h3>
+  <a href="#"><i class="material-icons">dashboard</i><span>Overview</span></a>
+
+  <h3>Sales</h3>
+  <a href="#"><i class="material-icons">shopping_cart</i><span>Orders</span></a>
+  <a href="#"><i class="material-icons">attach_money</i><span>Revenue</span></a>
+
+  <h3>Products</h3>
+  <a href="#"><i class="material-icons">inventory_2</i><span>Products</span></a>
+  <a href="#"><i class="material-icons">category</i><span>Categories</span></a>
+
+  <h3>Settings</h3>
+  <a href="#"><i class="material-icons">settings</i><span>Preferences</span></a>
+  <a href="#"><i class="material-icons">logout</i><span>Logout</span></a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+  <div class="header">
+    <h1>Welcome to GlobalSalesPoint</h1>
+    <input type="search" placeholder="Search products/orders...">
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total Orders</h3>
+      <p>
+<a href="http://565758.shop/">shop</a>
+<a href="http://565759.shop/">shop</a>
+<a href="http://565760.shop/">shop</a>
+<a href=""></a>
+<a href=""></a>
+<a href=""></a></p>
+    </div>
+
+    <div class="card">
+      <h3>Revenue</h3>
+      <p>$18,750 earned this month</p>
+    </div>
+
+    <div class="card">
+      <h3>Active Products</h3>
+      <p>56 products currently listed</p>
+    </div>
+
+    <div class="card">
+      <h3>Pending Orders</h3>
+      <p>8 orders awaiting fulfillment</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 globalsalespoint.store
+  </footer>
+</div>
+
+</body>
+</html>
